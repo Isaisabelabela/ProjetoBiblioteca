@@ -10,17 +10,21 @@ form.appendChild(errorMessage);
 form.addEventListener('submit', function(event) {
   event.preventDefault(); 
 
-  const title = document.getElementById('book-title').value;
-  const description = document.getElementById('book-description').value;
-  const price = parseFloat(document.getElementById('book-price').value).toFixed(2);
+  const title = document.getElementById('book-title').value.trim();
+  const description = document.getElementById('book-description').value.trim();
+  const price = document.getElementById('book-price').value.trim();
   const imageUrl = document.getElementById('book-image').value;
 
-  if (!title || !description || !price || !imageUrl){
+  if (!title || !description || !price){
     errorMessage.textContent = "Por favor, preencha todos os campos corretamente!";
     return;
   }
 
   errorMessage.textContent = "";
+
+  if (!imageUrl){
+    imageUrl = "imagens/imagemErro.jpeg";
+  }
 
   const newCard = document.createElement('div');
   newCard.classList.add('card');
@@ -32,6 +36,5 @@ form.addEventListener('submit', function(event) {
   `;
 
   container.appendChild(newCard);
-
   form.reset();
 });
