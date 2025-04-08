@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biblioteca de Livros</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Biblioteca de Livros</h1>
+  </header>
+
+  <main>
+    <div class="cards-container">
+      <div class="card">
+        <img src="imagens/livro01.jpg" alt="Capa do Livro">
+        <h2>Nome do Livro</h2>
+        <p class="descricao">Descrição breve do livro.</p>
+        <p class="preco">R$ 49,90</p>
+      </div>
+    </div>
+
+    <form id="book-form">
+        <input type="text" id="book-title" placeholder="Nome do livro" required>
+        <input type="text" id="book-description" placeholder="Descrição" required>
+        <input type="number" id="book-price" placeholder="Preço (ex: 49.90)" step="0.01" required>
+        <input type="url" id="book-image" placeholder="URL da imagem" required>
+        <button type="submit">Adicionar Livro</button>
+      </form>
+      
+      <!-- Botão antigo de adicionar pode ser removido, porque agora o submit é no form -->
+        </main>
+
+  <footer>
+    <p>Todos os direitos reservados © 2025</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
