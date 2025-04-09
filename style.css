@@ -14,7 +14,7 @@
   }
   
   header {
-    background-color: #4CAF50;
+    background-color: #942092;
     color: white;
     padding: 1rem;
     text-align: center;
@@ -71,7 +71,7 @@
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
     border: none;
-    background-color: #4CAF50;
+    background-color: #c564e3;
     color: white;
     border-radius: 8px;
     cursor: pointer;
@@ -81,11 +81,11 @@
   }
   
   #add-book:hover {
-    background-color: #45a049;
+    background-color: #c564e3;
   }
   
   footer {
-    background-color: #4CAF50;
+    background-color: #942092;
     color: white;
     text-align: center;
     padding: 1rem;
@@ -112,13 +112,17 @@
   }
   
   form#book-form button {
-    background-color: #4CAF50;
+    background-color: #c564e3;
     color: white;
     cursor: pointer;
     border: none;
   }
   
   form#book-form button:hover {
-    background-color: #45a049;
+    background-color: #c564e3;
   }
   
+  .faded-out{
+    opacity: 0;
+    transition: opacity 0.3s ease, tranform 0.3s ease;
+  }
